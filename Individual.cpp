@@ -1,5 +1,7 @@
 #include "Individual.h"
-#include <iostream>
+
+#include<iostream>
+#include<algorithm>
 
 using namespace std;
 
@@ -34,7 +36,19 @@ void Individual::flipBit(int pos)
 
 int Individual::getMaxOnes()
 {
-    return 0;
+    int maxOnes = 0;
+    int currentOnes = 0;
+    for (int i = 0; i < binaryString.size(); i++) {
+        if (binaryString.at(i) == '1') {
+            currentOnes++;
+            maxOnes = max(currentOnes, maxOnes);
+        }
+        else {
+            currentOnes = 0;
+        }
+    }
+
+    return maxOnes;
 }
 
 int Individual::getLength()

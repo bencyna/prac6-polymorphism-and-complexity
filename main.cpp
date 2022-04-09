@@ -12,6 +12,8 @@ int main() {
     cout << individual.getBit(0) << endl;
     individual.flipBit(0);
 
+    cout << individual.getMaxOnes() << endl;
+
     cout << individual.getString() << endl;
 
 
