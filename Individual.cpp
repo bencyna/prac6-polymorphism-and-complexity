@@ -8,7 +8,7 @@ Individual::Individual(int length) {
 }
 
 Individual::Individual(string binaryString) {
-    
+    this->binaryString = binaryString;
 }
 
 string Individual::getString()
@@ -23,8 +23,13 @@ int Individual::getBit(int pos)
 }
 
 void Individual::flipBit(int pos)
-{
-    return;
+{   
+    if (binaryString.at(pos) == '1') {
+        binaryString.at(pos) = '0';
+    }
+    else {
+        binaryString.at(pos) = '1';
+    }
 }
 
 int Individual::getMaxOnes()
