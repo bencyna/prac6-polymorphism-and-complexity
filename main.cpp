@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Individual.h"
 
 using namespace std;
 

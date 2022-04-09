@@ -1,4 +1,5 @@
 #include "Individual.h"
+#include <iostream>
 
 using namespace std;
 
@@ -12,12 +13,13 @@ Individual::Individual(string binaryString) {
 
 string Individual::getString()
 {
-    return "String";
+    return binaryString;
 }
 
 int Individual::getBit(int pos)
 {
-    return 0;
+
+    return binaryString.at(pos) - '0';
 }
 
 void Individual::flipBit(int pos)
