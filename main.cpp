@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    Individual individual("1010101");
+    Individual individual("0111101");
     
     cout << individual.getString() << endl;
 
@@ -15,6 +15,8 @@ int main() {
     cout << individual.getMaxOnes() << endl;
 
     cout << individual.getString() << endl;
+    
+    cout << individual.getLength() << endl;
 
 
     return 0; 

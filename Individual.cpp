@@ -53,5 +53,5 @@ int Individual::getMaxOnes()
 
 int Individual::getLength()
 {
-    return 0;
+    return binaryString.size();
 }
