@@ -3,13 +3,13 @@
 
 #pragma once
 
+#include "Individual.h"
+
 class Mutator
 {
 public:
-    Mutator();
-    ~Mutator();
+    virtual Individual mutate(Individual individual, int k);
 
-private:
 
 };
 

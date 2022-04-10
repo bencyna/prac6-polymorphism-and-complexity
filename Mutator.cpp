@@ -1,11 +1,5 @@
 #include "Mutator.h"
 
-Mutator::Mutator()
-{
-
-}
-
-Mutator::~Mutator()
-{
-
+Individual Mutator::mutate(Individual individual, int k) {
+    return individual;
 }
