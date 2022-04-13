@@ -17,7 +17,6 @@ int main() {
     cout << individual.getString() << endl;
 
     cout << individual.getLength() << endl;
-
-
+s
     return 0; 
 }
