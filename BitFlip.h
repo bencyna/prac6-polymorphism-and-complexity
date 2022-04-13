@@ -3,11 +3,13 @@
 
 #pragma once
 
-class BitFlip
+#include "Mutator.h"
+#include "Individual.h"
+
+class BitFlip : public Mutator
 {
 public:
-    BitFlip();
-    ~BitFlip();
+    Individual mutate(Individual individual, int k);
 
 private:
 

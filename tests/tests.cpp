@@ -1,8 +1,23 @@
 #include <iostream>
+#include "Individual.h"
+#include "Mutator.h"
+#include "BitFlip.h"
 
 using namespace std;
 
 int main() {
-    cout << "Hello World" << endl;
+
+    Individual individual(10);
+    
+    cout << individual.getString() << endl;
+
+    cout << individual.getBit(0) << endl;
+    individual.flipBit(0);
+
+    cout << individual.getMaxOnes() << endl;
+
+    cout << individual.getString() << endl;
+
+    cout << individual.getLength() << endl;
     return 0; 
 }
