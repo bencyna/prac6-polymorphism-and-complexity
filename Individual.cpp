@@ -40,7 +40,7 @@ int Individual::getMaxOnes()
 {
     int maxOnes = 0;
     int currentOnes = 0;
-    for (int i = 0; i < binaryString.size(); i++) {
+    for (unsigned int i = 0; i < binaryString.size(); i++) {
         if (binaryString.at(i) == '1') {
             currentOnes++;
             maxOnes = max(currentOnes, maxOnes);
