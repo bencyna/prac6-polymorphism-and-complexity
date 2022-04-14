@@ -3,14 +3,15 @@
 
 #pragma once
 
-class Rearrange
+#include "Mutator.h"
+#include "Individual.h"
+
+class Rearrange : public Mutator
 {
 public:
-    Rearrange();
-    ~Rearrange();
+    Individual * mutate(Individual *individual, int k);
 
 private:
 
 };
-
 #endif

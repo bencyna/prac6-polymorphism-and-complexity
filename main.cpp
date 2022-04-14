@@ -3,6 +3,7 @@
 #include "Mutator.h"
 #include "BitFlip.h"
 #include "BitFlipProb.h"
+#include "Rearrange.h"
 
 using namespace std;
 
@@ -14,13 +15,13 @@ int main() {
     
     Mutator * mutator;
 
-    BitFlipProb * bitFlip = new BitFlipProb(0.5);
+    Rearrange * bitFlip = new Rearrange();
 
     mutator = bitFlip;
 
     cout << individual->getString() << endl;
 
-    execute(individual, mutator, 2);
+    execute(individual, mutator, 5);
 
     cout << individual->getString() << endl;
 
