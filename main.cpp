@@ -5,6 +5,8 @@
 
 using namespace std;
 
+Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
+
 int main() {
 
     Individual individual(10);
@@ -21,4 +23,8 @@ int main() {
 
 
     return 0; 
+}
+
+Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
+    return indPtr;
 }
