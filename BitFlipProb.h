@@ -9,10 +9,11 @@
 class BitFlipProb : public Mutator
 {
 public:
-    BitFlipProb();
+    BitFlipProb(double p);
     Individual * mutate(Individual *individual, int k);
 
 private:
+    double p;
 
 };
 

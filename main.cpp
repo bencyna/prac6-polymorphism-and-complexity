@@ -2,6 +2,7 @@
 #include "Individual.h"
 #include "Mutator.h"
 #include "BitFlip.h"
+#include "BitFlipProb.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int main() {
     
     Mutator * mutator;
 
-    BitFlip * bitFlip = new BitFlip();
+    BitFlipProb * bitFlip = new BitFlipProb(0.5);
 
     mutator = bitFlip;
 
