@@ -19,5 +19,22 @@ int main() {
     cout << individual.getString() << endl;
 
     cout << individual.getLength() << endl;
+
+    ///////////////
+
+
+    Individual individual(10);
+    
+
+    BitFlip bitFlip;
+
+    cout << individual.getString() << endl;
+
+
+    individual = bitFlip.mutate(individual, 2);
+    
+    cout << individual.getString() << endl;
+
+
     return 0; 
 }

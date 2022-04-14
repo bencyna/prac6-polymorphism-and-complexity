@@ -9,17 +9,17 @@ Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
 
 int main() {
 
-    Individual individual(10);
+    Individual * individual = new Individual(10);
+    
+    Mutator * mutator = new Mutator();
+
+    BitFlip * bitFlip;
+
+    mutator = bitFlip;
+
     
 
-    BitFlip bitFlip;
-
-    cout << individual.getString() << endl;
-
-
-    individual = bitFlip.mutate(individual, 2);
     
-    cout << individual.getString() << endl;
 
 
     return 0; 
