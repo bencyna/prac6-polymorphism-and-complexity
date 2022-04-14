@@ -1,11 +1,5 @@
 #include "Rearrange.h"
 
-Rearrange::Rearrange()
-{
-
-}
-
-Rearrange::~Rearrange()
-{
-
+Individual * Rearrange::mutate(Individual * individual, int k) {
+    return individual;
 }
