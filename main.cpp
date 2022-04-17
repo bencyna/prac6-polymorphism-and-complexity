@@ -11,7 +11,7 @@ Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
 
 int main() {
 
-    Individual * individual = new Individual(10);
+    Individual * individual = new Individual("111000");
     
     Mutator * mutator;
 
@@ -21,7 +21,7 @@ int main() {
 
     cout << individual->getString() << endl;
 
-    execute(individual, mutator, 5);
+    execute(individual, mutator, 3);
 
     cout << individual->getString() << endl;
 
