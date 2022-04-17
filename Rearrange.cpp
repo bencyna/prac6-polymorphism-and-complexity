@@ -19,6 +19,7 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
 
     // time = O(n^2)
     // space = O(n)
+
     std::string placeholder = "";
     for (int i = k; i < stringLength; i++) {
         placeholder = placeholder + binaryString.at(i);

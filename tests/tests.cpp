@@ -2,8 +2,13 @@
 #include "Individual.h"
 #include "Mutator.h"
 #include "BitFlip.h"
+#include "BitFlipProb.h"
+#include "Rearrange.h"
 
 using namespace std;
+
+Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
+
 
 int main() {
 
@@ -23,18 +28,22 @@ int main() {
     ///////////////
 
 
-    Individual individual(10);
+    Individual * individual = new Individual("111000");
     
+    Mutator * mutator;
 
-    BitFlip bitFlip;
+    Rearrange * bitFlip = new Rearrange();
 
-    cout << individual.getString() << endl;
+    mutator = bitFlip;
 
+    cout << individual->getString() << endl;
 
-    individual = bitFlip.mutate(individual, 2);
-    
-    cout << individual.getString() << endl;
+    execute(individual, mutator, 3);
 
+    cout << individual->getString() << endl;
 
     return 0; 
 }
+
+Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
+    return mPtr->mutate(indPtr, k);
