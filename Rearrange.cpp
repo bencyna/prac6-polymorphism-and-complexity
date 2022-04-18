@@ -5,7 +5,7 @@ using namespace std;
 Individual * Rearrange::mutate(Individual * individual, int k) {
     int stringLength = individual->getLength();
     std::string binaryString = individual->getString();
-    int startingPos = k % stringLength; 
+    int startingPos = (k % stringLength) - 1; 
 
     if (startingPos == 0) {
         startingPos = k;
@@ -21,10 +21,10 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
     // space = O(n)
 
     std::string placeholder = "";
-    for (int i = k; i < stringLength; i++) {
+    for (int i = startingPos; i < stringLength; i++) {
         placeholder = placeholder + binaryString.at(i);
     }
-    for (int j = 0; j < k; j++) {
+    for (int j = 0; j < startingPos; j++) {
         placeholder = placeholder + binaryString.at(j);
     }
 
@@ -34,8 +34,6 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
         }
     }
 
-    cout << "placeholder: " <<placeholder << endl;
-    cout << "binaryString: " <<binaryString << endl;
 
     return individual;
 }
