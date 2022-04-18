@@ -14,7 +14,7 @@ Individual * BitFlipProb::mutate(Individual * individual, int k) {
     std::string individualString = individual->getString();
     int probability = p * 100;
 
-    for (int i=0; i < individualString.length(); i++) {
+    for (unsigned int i=0; i < individualString.length(); i++) {
         bool TrueFalse = (rand() % 100) < probability;
         
         if (TrueFalse) {
