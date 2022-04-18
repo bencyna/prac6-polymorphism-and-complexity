@@ -7,6 +7,10 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
     std::string binaryString = individual->getString();
     int startingPos = (k-1) % stringLength; 
 
+    if (startingPos == 0) {
+       startingPos = individual->getLength() - 1;
+    } 
+ 
     // time = O(n^2)
     // space = O(n)
 
