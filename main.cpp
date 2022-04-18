@@ -28,9 +28,9 @@ int main() {
 
     BitFlip * bitflip = new BitFlip();
 
-    mutator1 = rearrange;
+    mutator2 = rearrange;
 
-    mutator2 = bitflip;
+    mutator1 = bitflip;
 
     execute(individual1, mutator1, k1);
     execute(individual2, mutator2, k2);

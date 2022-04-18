@@ -1,6 +1,6 @@
 #include "Rearrange.h"
 #include <iostream>
-
+using namespace std;
 
 Individual * Rearrange::mutate(Individual * individual, int k) {
     int stringLength = individual->getLength();
@@ -33,6 +33,9 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
             individual->flipBit(m);
         }
     }
+
+    cout << "placeholder: " <<placeholder << endl;
+    cout << "binaryString: " <<binaryString << endl;
 
     return individual;
 }
