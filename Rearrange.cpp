@@ -5,13 +5,15 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
 
     int stringLength = individual->getLength();
     std::string binaryString = individual->getString();
-    int startingPos = (k % stringLength); 
+    int startingPos = (k-1) % stringLength; 
 
     if (startingPos == 0) {
         startingPos = k;
     } 
- 
+    else {
 
+    }
+ 
     // 1110000, 2
     // = 1000011
 

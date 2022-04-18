@@ -32,7 +32,7 @@ int main() {
 
     mutator2 = rearrange;
 
-    // execute(individual1, mutator1, k1);
+    execute(individual1, mutator1, k1);
     execute(individual2, mutator2, k2);
 
     cout << individual1->getString() << " " << individual2->getString() << " " <<  individual2->getMaxOnes() << endl;
