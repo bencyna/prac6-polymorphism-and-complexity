@@ -8,15 +8,16 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
     int startingPos = (k-1) % stringLength; 
 
     if (startingPos == 0) {
-        startingPos = k;
+        if (k < individual->getLength()) {
+            startingPos = k;
+        }
+        else {
+            startingPos = individual->getLength();
+        }
     } 
  
     std::cout << startingPos << std::endl;
-    // 1110000, 2
-    // = 1000011
-
-    // 1011010, 6
-    // 0101101
+  
 
     // time = O(n^2)
     // space = O(n)
