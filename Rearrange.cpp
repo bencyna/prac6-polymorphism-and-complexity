@@ -10,10 +10,8 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
     if (startingPos == 0) {
         startingPos = k;
     } 
-    else {
-
-    }
  
+    std::cout << startingPos << std::endl;
     // 1110000, 2
     // = 1000011
 
