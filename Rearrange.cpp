@@ -3,13 +3,17 @@
 using namespace std;
 
 Individual * Rearrange::mutate(Individual * individual, int k) {
+
     int stringLength = individual->getLength();
     std::string binaryString = individual->getString();
-    int startingPos = (k % stringLength) - 1; 
+    int startingPos = (k % stringLength); 
 
     if (startingPos == 0) {
         startingPos = k;
     } 
+    else {
+        startingPos = startingPos - 1;
+    }
 
     // 1110000, 2
     // = 1000011
@@ -25,15 +29,16 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
         placeholder = placeholder + binaryString.at(i);
     }
     for (int j = 0; j < startingPos; j++) {
+
         placeholder = placeholder + binaryString.at(j);
     }
 
     for (int m = 0; m < stringLength; m++) {
+
         if (binaryString.at(m) != placeholder.at(m)) {
             individual->flipBit(m);
         }
     }
-
 
     return individual;
 }
