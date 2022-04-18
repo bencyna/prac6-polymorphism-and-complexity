@@ -32,11 +32,10 @@ int main() {
 
     mutator2 = bitflip;
 
-    Individual * result1 = execute(individual1, mutator1, k1);
-    Individual * result2 = execute(individual2, mutator2, k2);
+    execute(individual1, mutator1, k1);
+    execute(individual2, mutator2, k2);
 
-
-    cout << result1->getString() << " " << result2->getString() << " " <<  result2->getMaxOnes() << endl;
+    cout << individual1->getString() << " " << individual2->getString() << " " <<  individual2->getMaxOnes() << endl;
 
     return 0; 
 }
