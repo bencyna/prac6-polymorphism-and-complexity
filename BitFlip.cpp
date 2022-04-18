@@ -1,5 +1,4 @@
 #include "BitFlip.h"
-#include <iostream>
 
 Individual * BitFlip::mutate(Individual * individual, int k) {
 

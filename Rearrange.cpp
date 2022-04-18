@@ -16,9 +16,6 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
         }
     } 
  
-    std::cout << startingPos << std::endl;
-  
-
     // time = O(n^2)
     // space = O(n)
 
