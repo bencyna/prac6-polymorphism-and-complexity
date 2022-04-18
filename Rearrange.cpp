@@ -1,6 +1,5 @@
 #include "Rearrange.h"
 #include <iostream>
-using namespace std;
 
 Individual * Rearrange::mutate(Individual * individual, int k) {
 
@@ -11,9 +10,7 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
     if (startingPos == 0) {
         startingPos = k;
     } 
-    else {
-        startingPos = startingPos - 1;
-    }
+ 
 
     // 1110000, 2
     // = 1000011
