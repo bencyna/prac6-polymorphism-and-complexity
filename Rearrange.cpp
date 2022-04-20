@@ -11,7 +11,7 @@ Individual * Rearrange::mutate(Individual * individual, int k) {
        startingPos = individual->getLength() - 1;
     } 
  
-    // time = O(n^2)
+    // time = O(n)
     // space = O(n)
 
     std::string placeholder = "";

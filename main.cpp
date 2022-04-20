@@ -43,3 +43,10 @@ int main() {
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
     return mPtr->mutate(indPtr, k);
 }
+
+// idnividual contructor
+// mutator 
+// bitflip 
+// rearrange
+// individual getString
+// indiviudal getMaxOnes
