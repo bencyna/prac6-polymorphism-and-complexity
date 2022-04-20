@@ -19,6 +19,8 @@ int main() {
     Individual * individual1 = new Individual(binarystr1);
 
     Individual * individual2 = new Individual(binarystr2);
+
+    cout << individual1->getBit(1000) << endl;
     
     Mutator * mutator1;
 

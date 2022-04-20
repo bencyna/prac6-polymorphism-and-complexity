@@ -22,7 +22,9 @@ string Individual::getString()
 
 int Individual::getBit(int pos)
 {
-
+    if (pos < 0 || pos >= binaryString.size()) {
+        return -1;
+    }
     return binaryString.at(pos) - '0';
 }
 
