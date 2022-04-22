@@ -41,7 +41,11 @@ int main() {
 }
 
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
-    return mPtr->mutate(*indPtr, k);
+    Individual &individual = *indPtr;
+    Individual * pOffspring;
+    Individual offspring = mPtr->mutate(individual, k);
+    pOffspring = &offspring;
+    return pOffspring; 
 }
 
 // idnividual contructor
