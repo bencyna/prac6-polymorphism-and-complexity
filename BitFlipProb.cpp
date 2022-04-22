@@ -10,15 +10,15 @@ BitFlipProb::BitFlipProb(double p) {
     }
 }
 
-Individual * BitFlipProb::mutate(Individual * individual, int k) {
-    std::string individualString = individual->getString();
+Individual BitFlipProb::mutate(Individual individual, int k) {
+    std::string individualString = individual.getString();
     int probability = p * 100;
 
     for (unsigned int i=0; i < individualString.length(); i++) {
         bool TrueFalse = (rand() % 100) < probability;
         
         if (TrueFalse) {
-            individual->flipBit(i);
+            individual.flipBit(i);
         }
     }
 

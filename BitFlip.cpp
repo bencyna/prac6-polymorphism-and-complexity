@@ -1,14 +1,14 @@
 #include "BitFlip.h"
 
-Individual * BitFlip::mutate(Individual * individual, int k) {
+Individual BitFlip::mutate(Individual individual, int k) {
 
-    int pos = k % individual->getLength(); 
+    int pos = k % individual.getLength(); 
 
     if (pos == 0) {
-        pos = individual->getLength();
+        pos = individual.getLength();
     } 
 
-    individual->flipBit(pos-1);
+    individual.flipBit(pos-1);
 
     return individual;
 }
