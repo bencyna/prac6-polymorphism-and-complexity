@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<algorithm>
+#include <list>
 
 using namespace std;
 
@@ -20,7 +21,9 @@ Individual::Individual(string binaryString) {
 
 void Individual::getString()
 {
-    cout << binaryString << endl;
+     for (auto const &i: binaryString) {
+        cout << i << endl;
+    }
 }
 
 int Individual::getBit(int pos)
