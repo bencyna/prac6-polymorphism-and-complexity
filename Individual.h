@@ -10,7 +10,7 @@ class Individual
 public:
     Individual(int length);
     Individual(std::string binaryString);
-    std::string getString();
+    void getString();
     int getBit(int pos);
     void flipBit(int pos);
     int getMaxOnes();
