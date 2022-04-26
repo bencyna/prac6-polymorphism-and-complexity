@@ -35,14 +35,14 @@ int Individual::getBit(int pos)
     }
 
     auto iterator = binaryString.begin();
-    auto bitVal = std::next(iterator, pos-1);
+    auto bitVal = next(iterator, pos-1);
     return *bitVal;
 }
 
 void Individual::flipBit(int pos)
 {   
     auto iterator = binaryString.begin();
-    auto bitVal = std::next(iterator, pos-1);
+    auto bitVal = next(iterator, pos-1);
      if (*bitVal == '1') {
         *bitVal = '0';
     }
@@ -55,8 +55,22 @@ int Individual::getMaxOnes()
 {
     int maxOnes = 0;
     int currentOnes = 0;
+    auto iterator = binaryString.begin();
+
+    while (iterator != binaryString.end()) {
+        if (*iterator == '1') {
+            currentOnes++;
+            maxOnes = max(currentOnes, maxOnes);
+        }
+        else {
+            currentOnes = 0;
+        }
+        iterator = next(iterator, 1);
+    }
+
+
     for (unsigned int i = 0; i < binaryString.size(); i++) {
-        if (binaryString.at(i) == '1') {
+        if (*iterator == '1') {
             currentOnes++;
             maxOnes = max(currentOnes, maxOnes);
         }
