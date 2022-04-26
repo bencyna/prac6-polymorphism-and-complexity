@@ -3,6 +3,7 @@
 #include<iostream>
 #include<algorithm>
 #include <list>
+#include <iterator>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ Individual::Individual(string binaryString) {
 void Individual::getString()
 {
      for (auto const &i: binaryString) {
-        cout << i << endl;
+        cout << i;
     }
 }
 
@@ -32,7 +33,11 @@ int Individual::getBit(int pos)
     if (pos < 0 || pos2 >= binaryString.size()) {
         return -1;
     }
-    return binaryString.at(pos) - '0';
+
+    auto it = binaryString.begin();
+
+    auto nx = std::next(it, pos-1);
+    return *nx;
 }
 
 void Individual::flipBit(int pos)
