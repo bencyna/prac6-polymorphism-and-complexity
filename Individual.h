@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <list>
 #include <string>
 
 class Individual
@@ -17,7 +18,7 @@ public:
     int getLength();
 
 private:
-    std::string binaryString;
+    std::list<char> binaryString;
 };
 
 #endif
