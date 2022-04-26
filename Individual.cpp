@@ -34,19 +34,20 @@ int Individual::getBit(int pos)
         return -1;
     }
 
-    auto it = binaryString.begin();
-
-    auto nx = std::next(it, pos-1);
-    return *nx;
+    auto iterator = binaryString.begin();
+    auto bitVal = std::next(iterator, pos-1);
+    return *bitVal;
 }
 
 void Individual::flipBit(int pos)
 {   
-    if (binaryString.at(pos) == '1') {
-        binaryString.at(pos) = '0';
+    auto iterator = binaryString.begin();
+    auto bitVal = std::next(iterator, pos-1);
+     if (*bitVal == '1') {
+        *bitVal = '0';
     }
     else {
-        binaryString.at(pos) = '1';
+        *bitVal = '1';
     }
 }
 
