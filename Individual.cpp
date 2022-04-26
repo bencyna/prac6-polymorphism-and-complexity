@@ -12,6 +12,8 @@ Individual::Individual(int length) {
 }
 
 Individual::Individual(string binaryString) {
+    // create a new individual with an identical list. 
+    // Note that this involves creating a new copy of the list.
     this->binaryString = binaryString;
 }
 

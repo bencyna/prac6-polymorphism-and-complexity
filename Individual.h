@@ -18,7 +18,6 @@ public:
 
 private:
     std::string binaryString;
-
 };
 
 #endif
