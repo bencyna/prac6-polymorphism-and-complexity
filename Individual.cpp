@@ -17,7 +17,7 @@ Individual::Individual(string binaryString) {
 
 string Individual::getString()
 {
-    return binaryString;
+    cout << binaryString << endl;
 }
 
 int Individual::getBit(int pos)
