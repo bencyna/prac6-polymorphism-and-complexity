@@ -11,7 +11,7 @@ Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
 
 int main() {
 
-    Individual individual("1010");
+    Individual individual("1010100");
 
     cout << " " << individual.getLength() << endl;
 
