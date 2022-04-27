@@ -29,19 +29,21 @@ void Individual::getString()
 
 int Individual::getBit(int pos)
 {
-    unsigned int pos2 = pos;
+    int pos2 = pos;
     if (pos < 0 || pos2 >= binaryString.size()) {
         return -1;
     }
 
     auto iterator = binaryString.begin();
     auto bitVal = next(iterator, pos-1);
-    return *bitVal;
+    int bitNum = *bitVal - '0';
+    return bitNum;
 }
 
 void Individual::flipBit(int pos)
 {   
     auto iterator = binaryString.begin();
+   
     auto bitVal = next(iterator, pos-1);
      if (*bitVal == '1') {
         *bitVal = '0';
@@ -66,17 +68,6 @@ int Individual::getMaxOnes()
             currentOnes = 0;
         }
         iterator = next(iterator, 1);
-    }
-
-
-    for (unsigned int i = 0; i < binaryString.size(); i++) {
-        if (*iterator == '1') {
-            currentOnes++;
-            maxOnes = max(currentOnes, maxOnes);
-        }
-        else {
-            currentOnes = 0;
-        }
     }
 
     return maxOnes;
