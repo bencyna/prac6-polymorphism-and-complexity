@@ -35,16 +35,16 @@ int main() {
     Individual * offspring1 = execute(individual1, mutator1, k1);
     Individual * offspring2 = execute(individual2, mutator2, k2);
 
+    cout << offspring1->getString() << " " << offspring2->getString() << " " <<  offspring2->getMaxOnes() << endl;
 
     return 0; 
 }
 
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
     Individual &individual = *indPtr;
-    Individual * pOffspring;
-    Individual offspring = mPtr->mutate(individual, k);
-    pOffspring = &offspring;
-    return pOffspring; 
+    Individual updatedIndividual = mPtr->mutate(individual, k);
+    Individual * pOffSpring = new Individual(updatedIndividual.getString());
+    return pOffSpring; 
 }
 
 // idnividual contructor

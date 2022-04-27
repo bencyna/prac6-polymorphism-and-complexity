@@ -15,9 +15,11 @@ Individual::Individual(string binaryString) {
     this->binaryString = binaryString;
 }
 
-void Individual::getString()
+string Individual::getString()
 {
-    cout << binaryString << endl;
+    // cout << binaryString << endl;
+    return binaryString;
+
 }
 
 int Individual::getBit(int pos)

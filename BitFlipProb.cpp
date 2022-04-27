@@ -14,7 +14,7 @@ Individual BitFlipProb::mutate(Individual individual, int k) {
     int probability = p * 100;
     int length = individual.getLength();
 
-    for (unsigned int i=1; i <= length; i++) {
+    for (int i=1; i <= length; i++) {
         bool TrueFalse = (rand() % 100) < probability;
         
         if (TrueFalse) {
