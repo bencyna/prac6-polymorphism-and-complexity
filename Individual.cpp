@@ -14,10 +14,9 @@ Individual::Individual(int length) {
 }
 
 Individual::Individual(string binaryString) {
-    // create a new individual with an identical list. 
-    // Note that this involves creating a new copy of the list.
-    // create a new individual with a copy of the binarySteing which is now a linked list
-    // this->binaryString = binaryString;
+    for (int i = 0; i < binaryString.length(); i++) {
+        this->binaryString.push_back(binaryString.at(i));
+    }
 }
 
 void Individual::getString()
@@ -49,7 +48,6 @@ void Individual::flipBit(int pos)
         *bitVal = '0';
     }
     else {
-        cout << "bitval is 0" << endl;
         *bitVal = '1';
     }
 }

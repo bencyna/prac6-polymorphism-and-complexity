@@ -11,11 +11,9 @@ Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
 
 int main() {
 
-    Individual individual(10);
+    Individual individual("1010");
 
-    individual.flipBit(11);
-
-    cout << " " << individual.getBit(3) << endl;
+    cout << " " << individual.getLength() << endl;
 
     individual.getString();
 
