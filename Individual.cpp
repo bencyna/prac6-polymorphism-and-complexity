@@ -17,6 +17,7 @@ Individual::Individual(string binaryString) {
     for (int i = 0; i < binaryString.length(); i++) {
         this->binaryString.push_back(binaryString.at(i));
     }
+    // create a new indiviudal with a copy of this individuals list
 }
 
 void Individual::getString()
