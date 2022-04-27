@@ -13,7 +13,11 @@ int main() {
 
     Individual individual(10);
 
+    individual.flipBit(11);
+
     cout << " " << individual.getBit(3) << endl;
+
+    individual.getString();
 
 
 

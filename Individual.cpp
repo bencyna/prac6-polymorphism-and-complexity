@@ -49,6 +49,7 @@ void Individual::flipBit(int pos)
         *bitVal = '0';
     }
     else {
+        cout << "bitval is 0" << endl;
         *bitVal = '1';
     }
 }
