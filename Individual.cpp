@@ -2,8 +2,6 @@
 
 #include<iostream>
 #include<algorithm>
-#include <list>
-#include <iterator>
 
 using namespace std;
 
@@ -14,42 +12,30 @@ Individual::Individual(int length) {
 }
 
 Individual::Individual(string binaryString) {
-    for (int i = 0; i < binaryString.length(); i++) {
-        this->binaryString.push_back(binaryString.at(i));
-    }
-    // create a new indiviudal with a copy of this individuals list
+    this->binaryString = binaryString;
 }
 
-void Individual::getString()
+string Individual::getString()
 {
-     for (auto const &i: binaryString) {
-        cout << i;
-    }
+    return binaryString;
 }
 
 int Individual::getBit(int pos)
 {
-    int pos2 = pos;
+    unsigned int pos2 = pos;
     if (pos < 0 || pos2 >= binaryString.size()) {
         return -1;
     }
-
-    auto iterator = binaryString.begin();
-    auto bitVal = next(iterator, pos-1);
-    int bitNum = *bitVal - '0';
-    return bitNum;
+    return binaryString.at(pos) - '0';
 }
 
 void Individual::flipBit(int pos)
 {   
-    auto iterator = binaryString.begin();
-   
-    auto bitVal = next(iterator, pos-1);
-     if (*bitVal == '1') {
-        *bitVal = '0';
+    if (binaryString.at(pos) == '1') {
+        binaryString.at(pos) = '0';
     }
     else {
-        *bitVal = '1';
+        binaryString.at(pos) = '1';
     }
 }
 
@@ -57,17 +43,14 @@ int Individual::getMaxOnes()
 {
     int maxOnes = 0;
     int currentOnes = 0;
-    auto iterator = binaryString.begin();
-
-    while (iterator != binaryString.end()) {
-        if (*iterator == '1') {
+    for (unsigned int i = 0; i < binaryString.size(); i++) {
+        if (binaryString.at(i) == '1') {
             currentOnes++;
             maxOnes = max(currentOnes, maxOnes);
         }
         else {
             currentOnes = 0;
         }
-        iterator = next(iterator, 1);
     }
 
     return maxOnes;
