@@ -13,8 +13,6 @@ BitFlipProb::BitFlipProb(double p) {
 Individual BitFlipProb::mutate(Individual individual, int k) {
     int probability = p * 100;
     int length = individual.getLength();
-    auto iterator = individual.getBit(0);
-
 
     for (unsigned int i=1; i <= length; i++) {
         bool TrueFalse = (rand() % 100) < probability;

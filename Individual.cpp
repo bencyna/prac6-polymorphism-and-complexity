@@ -15,7 +15,7 @@ Individual::Individual(string binaryString) {
     this->binaryString = binaryString;
 }
 
-string Individual::getString()
+void Individual::getString()
 {
     cout << binaryString << endl;
 }
