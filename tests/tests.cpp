@@ -9,44 +9,9 @@ using namespace std;
 
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k);
 
-
 int main() {
 
-    Individual individual(10);
-    
-    cout << individual.getString() << endl;
-
-    cout << individual.getBit(0) << endl;
-    individual.flipBit(0);
-
-    cout << individual.getMaxOnes() << endl;
-
-    cout << individual.getString() << endl;
-
-    cout << individual.getLength() << endl;
-
-    ///////////////
-
-
-    Individual * individual = new Individual("111000");
-    
-    Mutator * mutator;
-
-    Rearrange * bitFlip = new Rearrange();
-
-    mutator = bitFlip;
-
-    cout << individual->getString() << endl;
-
-    execute(individual, mutator, 3);
-
-    cout << individual->getString() << endl;
-
-    return 0; 
-
-     ////////////////////////////////////////////////////////////////
-
-     string binarystr1, binarystr2;
+    string binarystr1, binarystr2;
     int k1, k2;
 
     cin >> binarystr1 >> k1 >> binarystr2 >> k2;
@@ -70,7 +35,29 @@ int main() {
     Individual * offspring1 = execute(individual1, mutator1, k1);
     Individual * offspring2 = execute(individual2, mutator2, k2);
 
+    cout << offspring1->getString() << " " << offspring2->getString() << " " <<  offspring2->getMaxOnes() << endl;
+
+    return 0; 
 }
 
 Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
-    return mPtr->mutate(indPtr, k);
+    Individual &individual = *indPtr;
+    Individual updatedIndividual = mPtr->mutate(individual, k);
+    Individual * pOffSpring = new Individual(updatedIndividual.getString());
+    return pOffSpring; 
+}
+
+// idnividual contructor
+
+// Tested given 
+// Larger k1,k2 than length
+// smaller k1,k2 than length
+// long string
+// same k1, k2, as length
+// really large k1, k2
+
+
+//  1010101 20 1010101 20
+//  1010101 1 1010101 1
+//  0 1 0 1 
+//  0000 4 0011 4

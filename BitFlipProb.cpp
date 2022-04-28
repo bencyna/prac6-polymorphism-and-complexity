@@ -2,7 +2,7 @@
 #include <string>
 
 BitFlipProb::BitFlipProb(double p) {
-    if (p > 0 && p < 1){
+    if (p >= 0 && p <= 1){
         this->p = p;
     }
     else {
