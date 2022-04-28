@@ -9,6 +9,8 @@ Individual::Individual(int length) {
     for (int i = 0; i < length; i++) {
         binaryString.push_back('0');
     }
+
+    // T: O(n) 
 }
 
 Individual::Individual(string binaryString) {
@@ -43,6 +45,10 @@ void Individual::flipBit(int pos)
 
 int Individual::getMaxOnes()
 {
+
+    // S: O(n)
+    // T: O(1)
+
     int maxOnes = 0;
     int currentOnes = 0;
     for (unsigned int i = 0; i < binaryString.size(); i++) {
