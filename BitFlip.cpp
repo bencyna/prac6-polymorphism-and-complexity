@@ -11,7 +11,7 @@ Individual BitFlip::mutate(Individual individual, int k) {
         pos = individual.getLength();
     } 
 
-    individual.flipBit(pos-1);
+    individual.flipBit(pos);
 
     return individual;
 }

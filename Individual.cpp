@@ -35,11 +35,15 @@ int Individual::getBit(int pos)
 
 void Individual::flipBit(int pos)
 {   
-    if (binaryString.at(pos) == '1') {
-        binaryString.at(pos) = '0';
+    if (pos == 0) {
+        pos = binaryString.length();
+    } 
+
+    if (binaryString.at(pos-1) == '1') {
+        binaryString.at(pos-1) = '0';
     }
     else {
-        binaryString.at(pos) = '1';
+        binaryString.at(pos-1) = '1';
     }
 }
 

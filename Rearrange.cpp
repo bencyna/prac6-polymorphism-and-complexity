@@ -9,7 +9,8 @@ Individual Rearrange::mutate(Individual individual, int k) {
     if (startingPos == 0) {
        startingPos = individual.getLength() - 1;
     } 
- 
+    
+    
     // time = O(n)
     // space = O(n)
 
@@ -27,7 +28,8 @@ Individual Rearrange::mutate(Individual individual, int k) {
         char bit = individual.getBit(m);
 
         if (bit != placeholder.at(m)) {
-            individual.flipBit(m);
+            // 
+            individual.flipBit(m+1);
         }
     }
 
