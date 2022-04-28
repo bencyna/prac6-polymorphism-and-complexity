@@ -61,3 +61,4 @@ Individual * execute(Individual * indPtr, Mutator * mPtr, int k) {
 //  1010101 1 1010101 1
 //  0 1 0 1 
 //  0000 4 0011 4
+//  000 1 001 1 = 100 100 1, should = 100 001
